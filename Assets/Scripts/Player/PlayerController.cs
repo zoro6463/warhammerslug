@@ -18,6 +18,7 @@ public class PlayerController : BaseCharacterController
     protected override void Awake()
     {
         base.Awake();
+        
 
         //파라미터 초기화
         speed = initSpeed;
@@ -27,6 +28,7 @@ public class PlayerController : BaseCharacterController
 
     protected override void FixedUpdateCharacter()
     {
+        
         // 착지 검사
         if (jumped)
         {

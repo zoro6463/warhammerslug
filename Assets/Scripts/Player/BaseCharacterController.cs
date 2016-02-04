@@ -41,6 +41,7 @@ public class BaseCharacterController : MonoBehaviour {
     //=======코드(monobehavior 기본 기능 구현)===
     protected virtual void Awake()
     {
+        
         animator = GetComponent<Animator>();
         groundCheck_L = transform.Find("GroundCheck_L");
         groundCheck_C = transform.Find("GroundCheck_C");
@@ -62,12 +63,13 @@ public class BaseCharacterController : MonoBehaviour {
     }
     protected virtual void Update()
     {
-
+        
     }
     protected virtual void FixedUpdate()
     {
+        
         //낙하체크
-        if(transform.position.y < -30.0f)
+        if (transform.position.y < -30.0f)
         {
             Dead(false); //사망
         }
@@ -126,7 +128,7 @@ public class BaseCharacterController : MonoBehaviour {
 
     protected virtual void FixedUpdateCharacter()
     {
-
+        Debug.Log("BaseCharacterController");
     }
 
 
@@ -155,7 +157,9 @@ public class BaseCharacterController : MonoBehaviour {
    
        activeSts = false;
         animator.SetTrigger("Dead");
-              
+        
+
+
  }
     public virtual bool SetHP(float _hp, float _hpMax)
     {

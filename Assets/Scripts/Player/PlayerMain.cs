@@ -10,9 +10,10 @@ public class PlayerMain : MonoBehaviour {
 
 	//=====코드(monobehaviour 기본 기능 구현)-----
     
-        void Awake() {
+    void Awake()
+    {
         playerCtrl = GetComponent<PlayerController>();
-            }
+    }
 
 	// 
 	void Update () {
