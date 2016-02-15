@@ -128,5 +128,10 @@ public class PlayerController : BaseCharacterController
                 break;
         }
     }
+    // 공격 추가
+    public void ActionAttack()
+    {
+        animator.SetTrigger("Attack_A");
+    }
 }
            
